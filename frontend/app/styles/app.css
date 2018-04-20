@@ -1,0 +1,104 @@
+.header {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	background-color: #4257b2;
+}
+
+.d_logo {
+	padding: 20px 40px 0px 40px;
+}
+
+.tools {
+	/*height: 700px;*/
+}
+
+.widget {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/*.widget>div {
+	padding: 20px;
+}*/
+
+.widget>div>div>div {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: #09f6c4;
+	text-align: center;
+	padding: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.create {
+	font-size: 30px;
+	color: black;
+}
+
+.edit div  {
+	color: black;
+	font-size: 20px;
+}
+
+.public {
+	color: black;
+	font-size: 20px;
+}
+
+.light {
+	width: 100%;
+}
+.introduction {
+	font-family: hurme_no2-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
+	width: calc(99.99% * 6/12 - (32px - 32px * 6/12));
+	color: #455358;
+	padding-bottom: 10%;
+}
+.tools {
+	text-align: right;
+	margin-left: calc(99.99% * (-5/12 * -1) - (32px - 32px * (-1/12 * -1)) + 32px) !important;
+	position: relative;
+}
+.heading {
+	font-weight: bolder;
+	font-size: 5.0rem;
+	line-height: 65px;
+	padding-bottom: 30px;
+	font-family: hurme_no2-webfont;
+}
+.splash {
+	padding-top: 30%;
+}
+.started {
+	padding: 20px 0px;
+	margin-top: 30px;
+}
+.back_image {
+	height: 12.5rem;
+}
+.results > div {
+	margin-right: 20px;
+}
+.results > div:hover {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border-bottom-style: solid;
+	border-bottom-color: blue;
+	border-bottom-width: 8px;
+}
+.detailed_pack {
+	padding: 10px;
+}
+.user_image {
+	width: 10px;
+	height: 10px;
+}
+.detailed_pack {
+	column-count: 3;
+}
+/*.second_body {
+	background: url(../public/assets/image/splash-laptop-desktop.BwuW.jpg) no-repeat;
+    background-size: 100%;
+}*/

@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-5 col-md-5"></div>
+		<div class="col-sm-7 col-md-7">
+			{{input value=value
+				key-up=(action 'handleFilterEntry')
+				class="light"
+				placeholder="Filter By City"}}
+		</div>
+	</div>
+	{{yield results}}
+</div>
