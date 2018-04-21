@@ -2,10 +2,10 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 	actions: {
-		filterByCity(param) {
+		filterByOwner(param) {
 			if(param !== '') {
 				return this.get('store')
-          			.query('pack', { city: param }).then((results) => {
+          			.query('pack', { owner: param }).then((results) => {
             		return { query: param, results: results };
           	});
 			} else {

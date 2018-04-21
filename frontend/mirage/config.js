@@ -41,7 +41,7 @@ export default function() {
         attributes: {
             title: 'Urban Living',
             owner: 'Mike Teavee',
-            city: 'Seattle',
+            // city: 'Seattle',
             category: '',
             terms: 1,
             image: 'https://o.quizlet.com/DV0cZJx4OONoFVB8KIzIWQ.jpg'
@@ -52,7 +52,7 @@ export default function() {
         attributes: {
             title: 'Urban Living',
             owner: 'Mike Teavee',
-            city: 'Seattle',
+            // city: 'Seattle',
             category: 'Condo',
             terms: 1,
             image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
@@ -63,7 +63,7 @@ export default function() {
         attributes: {
             title: 'Urban Living',
             owner: 'Mike Teavee',
-            city: 'Seattle',
+            // city: 'Seattle',
             category: 'Condo',
             terms: 1,
             image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
@@ -74,16 +74,16 @@ export default function() {
         attributes: {
             title: 'Urban Living',
             owner: 'Mike Teavee',
-            city: 'Seattle',
+            // city: 'Seattle',
             category: 'Condo',
             terms: 1,
             image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
             }
         }]
     this.get('/packs', function(db, request) {
-        if (request.queryParams.city !== undefined) {
+        if (request.queryParams.owner !== undefined) {
             let filteredPacks = packs.filter(function(i) {
-                return i.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
+                return i.attributes.owner.toLowerCase().indexOf(request.queryParams.owner.toLowerCase()) !== -1;
             });
             return {data: filteredPacks};
         } else {
