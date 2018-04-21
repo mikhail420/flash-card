@@ -24,10 +24,10 @@
 
 .widget>div>div>div {
 	border-style: dashed;
-	border-width: 2px;
+	border-width: 4px;
 	border-color: #09f6c4;
 	text-align: center;
-	padding: 20px;
+	padding: 15%;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -79,15 +79,18 @@
 }
 .results > div {
 	margin-right: 20px;
+	padding-bottom: 7px;
 }
-.results > div:hover {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-	border-bottom-style: solid;
-	border-bottom-color: blue;
-	border-bottom-width: 8px;
+
+.listing:hover {
+	background-color: blue;
+	transition: 0.7s;
 }
+
+/*.results > div:hover {
+	background-color: blue;
+	transition: 0.7s;
+}*/
 .detailed_pack {
 	padding: 10px;
 }
@@ -97,6 +100,9 @@
 }
 .detailed_pack {
 	column-count: 3;
+}
+.results>div {
+	display: inline-block;
 }
 /*.second_body {
 	background: url(../public/assets/image/splash-laptop-desktop.BwuW.jpg) no-repeat;
