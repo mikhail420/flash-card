@@ -104,6 +104,62 @@
 .results>div {
 	display: inline-block;
 }
+.title {
+	line-height: 20px;
+	margin-right: 20px;
+	font-size: 20px;
+	border: none;
+	border-bottom: solid;
+	padding: 10px;
+}
+.title:hover {
+	transition: 0.7s;
+	border-bottom-color: #3ccfcf;
+}
+.short_description {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.options {
+	padding: 20px;
+}
+.toggle {
+	padding-top: 30px;
+}
+.search_question {
+	padding: 10px;
+	font-size: 20px;
+}
+.question, .answer {
+	border-bottom-style: solid;
+	border-bottom-color: #3ccfcf;
+}
+.answer_image {
+	width: 20px;
+	height: 20px;
+	border: solid 1px #d7cccc;
+	float: right;
+	margin-top: 1%;
+	box-shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.4);
+}
+.line {
+	height: 1px;
+	border-bottom: solid 2px #bdb7b7;
+	padding-top: 20px;
+}
+.input_question {
+	border: none;
+}
+.input_answer {
+	border: none;
+}
+.add_question {
+	padding-top: 30px;
+	font-size: 20px;
+}
+.block1 {
+	padding-bottom: 30px;
+}
 /*.second_body {
 	background: url(../public/assets/image/splash-laptop-desktop.BwuW.jpg) no-repeat;
     background-size: 100%;

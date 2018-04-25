@@ -1,6 +1,60 @@
 export default function() {
     this.namespace = '/api';
 
+    let rentals = [{
+    //   this.get('/rentals', function() {
+    // return {
+    //   data: [{
+        type: 'rentals',
+        id: 'grand-old-mansion',
+        attributes: {
+            question: 'What is lion?',
+            answer: 'Lion is a strong and aggressive animal.',
+            title: 'Grand Old Mansion',
+            owner: 'Veruca Salt',
+            city: 'San Francisco',
+            category: 'Estate',
+            bedrooms: 15,
+            image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg'
+        }
+      }, {
+        type: 'rentals',
+        id: 'urban-living',
+        attributes: {
+            question: 'Tell me about biology!',
+            answer: 'Biology is a one scienc field.',
+          title: 'Urban Living',
+          owner: 'Mike Teavee',
+          city: 'Seattle',
+          category: 'Condo',
+          bedrooms: 1,
+          image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
+        }
+      }, {
+        type: 'rentals',
+        id: 'downtown-charm',
+        attributes: {
+            question: 'Do you know what love is?',
+            answer: 'Love is true',
+          title: 'Downtown Charm',
+          owner: 'Violet Beauregarde',
+          city: 'Portland',
+          category: 'Apartment',
+          bedrooms: 3,
+          image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'
+        }
+      }];
+      this.get('/rentals', function(db, request) {
+    if(request.queryParams.question !== undefined) {
+      let filteredRentals = rentals.filter(function(i) {
+        return i.attributes.question.toLowerCase().indexOf(request.queryParams.question.toLowerCase()) !== -1;
+      });
+      return { data: filteredRentals };
+    } else {
+      return { data: rentals };
+    }
+  });
+
     let packs = [{
         type: 'packs',
         id: 'Chemistry',

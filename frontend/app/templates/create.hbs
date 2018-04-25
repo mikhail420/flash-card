@@ -1,9 +1,85 @@
-<div class="jumbo">
-	<div class="right tomster"></div>
-  	<h2>About Super Rentals</h2>
-  	<p>
-	    The Super Rentals website is a delightful project created to explore Ember.
-	    By building a property rental site, we can simultaneously imagine traveling
-	    AND building Ember applications.
-  	</p>
+<div class="container">
+	<h2>Create a study pack</h2>
+	<div class="row short_description">
+		{{input type="text" value=title class="title col-sm-5" placeholder="Title of study pack"}}
+		{{input type="text" value=description class="title col-sm-5" placeholder="Description of study pack"}}
+	</div>
+	<div class="row options">
+		<div class="col-sm-4 toggle">
+			<div class="row">
+				{{x-toggle
+					class="col-sm-7"
+		            offLabel='Public'
+		            onLabel='Private'
+		            showLabels=true
+		            value=actionBound
+		            onToggle=(action (mut actionBound))
+	          	}}
+	          	{{input class="col-sm-5" disabled=true value=actionBound}}
+	        </div>
+	        <div class="row">
+				{{x-toggle
+					class="col-sm-7"
+		            offLabel='Me'
+		            onLabel='Group'
+		            showLabels=true
+		            value=actionBounds
+		            onToggle=(action (mut actionBounds))
+	          	}}
+	          	{{input class="col-sm-5" disabled=true value=actionBounds}}
+	        </div>
+		</div>
+		<div class="col-sm-4 users">
+			<h3>Users</h3>
+			{{#power-select
+  				options=userOptions
+  				placeholder="Select a user"
+  				selected=selectedFilter
+  				searchEnabled=false
+  				onchange=(action (mut selectedFilter))
+  				as |filter| }}
+  				{{filter.name}}
+			{{/power-select}}
+		</div>
+		<div class="col-sm-4 invite">
+			<h3>Invite</h3>
+			{{#power-select
+  				options=inviteOptions
+  				placeholder="Invite a person"
+  				selected=selectFilter
+  				searchEnabled=false
+  				onchange=(action (mut selectFilter))
+  				as |filter| }}
+  				{{filter.name}}
+			{{/power-select}}
+		</div>
+	</div>
+	<div class="questions">
+		<h3>Question and Answer</h3>
+		{{#question-filter filter=(action 'filterByOwner') as |filteredResults|}}
+			<div class="results" style="column-count: 3;">
+				{{#each filteredResults as |packUnit|}}
+					<div>
+					</div>
+				{{/each}}
+			</div>
+		{{/question-filter}}
+	</div>
+	{{#each model as |rental|}}
+  <article class="listing">
+    <h3>{{rental.title}}</h3>
+    <div class="detail owner">
+      <span>Owner:</span> {{rental.owner}}
+    </div>
+    <div class="detail type">
+      <span>Type:</span> {{rental.category}}
+    </div>
+    <div class="detail location">
+      <span>Location:</span> {{rental.city}}
+    </div>
+    <div class="detail bedrooms">
+      <span>Number of bedrooms:</span> {{rental.bedrooms}}
+    </div>
+  </article>
+{{/each}}
 </div>

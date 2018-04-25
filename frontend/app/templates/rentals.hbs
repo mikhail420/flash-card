@@ -1,0 +1,115 @@
+<div class="container">
+	<h2>Create a study pack</h2>
+	<div class="row short_description">
+		{{input type="text" value=title class="title col-sm-5" placeholder="Title of study pack"}}
+		{{input type="text" value=description class="title col-sm-5" placeholder="Description of study pack"}}
+	</div>
+	<div class="row options">
+		<div class="col-sm-4 toggle">
+			<div class="row">
+				{{x-toggle
+					class="col-sm-7"
+		            offLabel='Public'
+		            onLabel='Private'
+		            showLabels=true
+		            value=actionBound
+		            onToggle=(action (mut actionBound))
+	          	}}
+	          	{{input class="col-sm-5" disabled=true value=actionBound}}
+	        </div>
+	        <div class="row">
+				{{x-toggle
+					class="col-sm-7"
+		            offLabel='Me'
+		            onLabel='Group'
+		            showLabels=true
+		            value=actionBounds
+		            onToggle=(action (mut actionBounds))
+	          	}}
+	          	{{input class="col-sm-5" disabled=true value=actionBounds}}
+	        </div>
+		</div>
+		<div class="col-sm-4 users">
+			<h3>Users</h3>
+			{{#power-select
+  				options=userOptions
+  				placeholder="Select a user"
+  				selected=selectedFilter
+  				searchEnabled=false
+  				onchange=(action (mut selectedFilter))
+  				as |filter| }}
+  				{{filter.name}}
+			{{/power-select}}
+		</div>
+		<div class="col-sm-4 invite">
+			<h3>Invite</h3>
+			{{#power-select
+  				options=inviteOptions
+  				placeholder="Invite a person"
+  				selected=selectFilter
+  				searchEnabled=false
+  				onchange=(action (mut selectFilter))
+  				as |filter| }}
+  				{{filter.name}}
+			{{/power-select}}
+		</div>
+	</div>
+	<div class="questions">
+		<h3>Question and Answer</h3>
+	</div>
+	{{#list-filter filter=(action 'filterByCity') as |filteredResults|}}
+  		<ul class="results">
+    		{{#each filteredResults as |rentalUnit|}}
+      			<li>{{rental-listing rental=rentalUnit}}</li>
+    		{{/each}}
+  		</ul>
+	{{/list-filter}}
+	<div class="line"></div>
+	<div class="row add_question">
+		<h3 style="color: gray; text-align: center; padding-bottom: 30px;">Add your questions</h3>
+		<div class="col-sm-6 row">
+	        <span class="col-sm-1">Q:</span>
+	        <div class="question col-sm-10">
+	        	{{input type="text" value=question class="input_question col-sm-12" placeholder="Write your question"}}
+	        </div>
+    	</div>
+    	<div class="col-sm-6 row">
+	        <span class="col-sm-1">A:</span>
+	        <div class="answer col-sm-10">
+	        	{{input type="text" value=answer class="input_answer col-sm-10" placeholder="Write your answer"}}
+	        	<img class="answer_image" src="../public/assets/image/image.png">
+	        </div>
+    	</div>
+	</div>
+	<div class="row add_question">
+		<div class="col-sm-6 row">
+	        <span class="col-sm-1">Q:</span>
+	        <div class="question col-sm-10">
+	        	{{input type="text" value=question class="input_question col-sm-12" placeholder="Write your question"}}
+	        </div>
+    	</div>
+    	<div class="col-sm-6 row">
+	        <span class="col-sm-1">A:</span>
+	        <div class="answer col-sm-10">
+	        	{{input type="text" value=answer class="input_answer col-sm-10" placeholder="Write your answer"}}
+	        	<img class="answer_image" src="../public/assets/image/image.png">
+	        </div>
+    	</div>
+	</div>
+	<div class="row add_question">
+		<div class="col-sm-6 row">
+	        <span class="col-sm-1">Q:</span>
+	        <div class="question col-sm-10">
+	        	{{input type="text" value=question class="input_question col-sm-12" placeholder="Write your question"}}
+	        </div>
+    	</div>
+    	<div class="col-sm-6 row">
+	        <span class="col-sm-1">A:</span>
+	        <div class="answer col-sm-10">
+	        	{{input type="text" value=answer class="input_answer col-sm-10" placeholder="Write your answer"}}
+	        	<img class="answer_image" src="../public/assets/image/image.png">
+	        </div>
+    	</div>
+	</div>
+	<button type="button" style="margin-top: 40px; float: right; margin-bottom: 60px; margin-right: 60px;" class="btn btn-lg btn-success">Create</button>
+</div>
