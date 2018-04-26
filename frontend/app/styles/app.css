@@ -16,6 +16,8 @@
 .widget {
 	padding-top: 30px;
 	padding-bottom: 30px;
+	width: 1300px !important;
+	max-width: 1300px;
 }
 
 /*.widget>div {
@@ -75,15 +77,16 @@
 	margin-top: 30px;
 }
 .back_image {
-	height: 12.5rem;
+	height: 20.5rem;
 }
 .results > div {
+	margin-top: 5%;
 	margin-right: 20px;
 	padding-bottom: 7px;
 }
 
 .listing:hover {
-	background-color: blue;
+	background-color: #42c2f4;
 	transition: 0.7s;
 }
 
@@ -98,9 +101,9 @@
 	width: 10px;
 	height: 10px;
 }
-.detailed_pack {
+/*.detailed_pack {
 	column-count: 3;
-}
+}*/
 .results>div {
 	display: inline-block;
 }
