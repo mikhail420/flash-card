@@ -1,5 +1,5 @@
 <div class="container">
-	<h2>Create a study pack</h2>
+	<h1>Create a study pack</h1>
 	<div class="row short_description">
 		{{input type="text" value=title class="title col-sm-5" placeholder="Title of study pack"}}
 		{{input type="text" value=description class="title col-sm-5" placeholder="Description of study pack"}}
@@ -33,6 +33,7 @@
 			<h3>Users</h3>
 			{{#power-select
   				options=userOptions
+  				id="powerselect"
   				placeholder="Select a user"
   				selected=selectedFilter
   				searchEnabled=false
@@ -45,6 +46,7 @@
 			<h3>Invite</h3>
 			{{#power-select
   				options=inviteOptions
+  				id="powerselect"
   				placeholder="Invite a person"
   				selected=selectFilter
   				searchEnabled=false
@@ -55,7 +57,9 @@
 		</div>
 	</div>
 	<div class="questions">
-		<h3>Question and Answer</h3>
+		<div style="text-align: center;">
+			<h3>Question and Answer</h3>
+		</div>
 		{{#question-filter filter=(action 'filterByOwner') as |filteredResults|}}
 			<div class="results" style="column-count: 3;">
 				{{#each filteredResults as |packUnit|}}

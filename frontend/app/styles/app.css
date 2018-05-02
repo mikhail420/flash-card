@@ -114,6 +114,7 @@
 	border: none;
 	border-bottom: solid;
 	padding: 10px;
+	outline: none;
 }
 .title:hover {
 	transition: 0.7s;
@@ -152,9 +153,11 @@
 }
 .input_question {
 	border: none;
+	outline: none;
 }
 .input_answer {
 	border: none;
+	outline: none;
 }
 .add_question {
 	padding-top: 30px;
@@ -167,3 +170,79 @@
 	background: url(../public/assets/image/splash-laptop-desktop.BwuW.jpg) no-repeat;
     background-size: 100%;
 }*/
+#powerselect {
+	outline: none;
+}
+
+.cls_undernone .cls_underimg {
+	text-decoration: none !important;
+}
+.cls_createfont {
+	font-weight: 700;
+	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_hurmefont {
+	font-family: 'hurme_no2-webfont' !important;	
+}
+
+.cls_toggleinput1 {
+	border: none;
+	background-color: white;
+	font-weight: 600;
+	font-family: 'hurme_no2-webfont' !important;
+	font-size: 17px;	
+	text-transform: uppercase;
+}
+
+.cls_toggleinput2 {
+	border: none;
+	background-color: white;
+	font-weight: 600;
+	font-family: 'hurme_no2-webfont' !important;
+	font-size: 17px;	
+	margin-top: 2%;
+	text-transform: uppercase;
+}
+
+.cls_createbtn {
+	font-weight: 600;
+	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_addquestion {
+	font-weight: 600;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.cls_toggle1 {
+	font-size: 17px;
+}
+
+.cls_toggle2 {
+	margin-top: 2%;
+	font-size: 17px;
+}
+
+.cls_question {
+	text-align: center;
+}
+
+.cls_powerselect {
+	font-size: 17px !important;
+	outline: none !important;
+}
+
+.cls_power {
+	padding-left: 5% !important;
+	padding-right: 5% !important;
+}
+
+.cls_btncreate {
+	margin-top: 40px;
+	float: right;
+	margin-bottom: 60px;
+	margin-right: 60px;
+	outline: none !important;
+}
