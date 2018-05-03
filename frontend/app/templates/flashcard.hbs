@@ -1,8 +1,8 @@
 <div class="container">
 	<div class="row">
-		<div class="col-sm-2 sidebar cls_cardheight">
+		<div class="col-sm-2 sidebar cls_fullheight">
 			<div class="cards">
-				<h3>CARDS</h3>
+				<h3 class="cls_fontfamily">CARDS</h3>
 				<div class="progress-bar-striped active" id="myProgress">
 					<div class="progress-bar-striped active" id="myBar"></div>
 				</div>
@@ -12,16 +12,17 @@
 				</div>
 			</div>
 			<div class="button_group">
-				<div><button onclick="move()" type="button" class="btn btn-default">
+				<div><button onclick="move()" type="button" class="cls_outline btn btn-default">
 						<span class="glyphicon glyphicon-play"></span> Play
 					</button>
 				</div>
-				<div><button onclick="move()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-random"></span> Shuffle</button></div>
-				<div><button onclick="move()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-tasks"></span> Options</button></div>
+				<div><button onclick="move()" type="button" class="cls_outline btn btn-default"><span class="glyphicon glyphicon-random"></span> Shuffle</button></div>
+				<div><button onclick="move()" type="button" class="cls_outline btn btn-default"><span class="glyphicon glyphicon-tasks"></span> Options</button></div>
 			</div>
 		</div>
-		<div class="col-sm-8">
-			<h2 class="flash_header">My FlashCard</h2>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-6">
+			<h1 class="flash_header cls_fontfamily cls_fontweight">My FlashCard</h1>
 			{{#carousel-container transitionInterval=400 as |ui controls|}}
   				<div class="carousel-body">
 				    {{#each model as |flashcardUnit|}}
@@ -30,14 +31,11 @@
 						{{/ui.item}}
 					{{/each}}
   				</div>
-
-  				<button onclick={{controls.previous}}>
-    				Slide Left
-  				</button>
-  				<button onclick={{controls.next}}>
-    				Slide Right
-  				</button>
-			{{/carousel-container}}
+  				<div class="cls_center">
+	  				<button class='btn sec ico cls_outline' onclick={{controls.previous}}>Slide Left</button>
+	  				<button class='btn sec ico cls_outline' onclick={{controls.next}}>Slide Right</button>
+  				</div>
+  			{{/carousel-container}}
 		</div>
 	</div>	
 </div>
