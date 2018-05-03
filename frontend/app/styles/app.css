@@ -291,3 +291,21 @@
 	margin-right: 60px;
 	outline: none !important;
 }
+
+.cls_studypackbtn {
+	font-weight: 800;
+}
+
+.cls_indexbtncolor {
+	color: #1e8cf1 !important;
+	font-weight: 600;
+}
+
+.cls_indexpadding {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.cls_cardheight {
+	height: 84vh;
+}
