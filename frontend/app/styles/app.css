@@ -163,6 +163,51 @@
 .block1 {
 	padding-bottom: 30px;
 }
+.sidebar {
+	/*height: 800px;*/
+	text-align: center;
+	box-shadow: 0.3125rem 0 1.25rem 0 rgba(0,0,0,0.28);
+}
+.cards {
+	margin-top: 30%;
+}
+#myProgress {
+	margin-top: 20px;
+  	width: 100%;
+  	background-color: #ddd;
+}
+
+#myBar {
+  	width: 1%;
+  	height: 15px;
+  	background-color: #4CAF50;
+}
+.button_group {
+	margin-top: 100%;
+	margin-bottom: 40%;
+	/*position: absolute;*/
+	/*top: auto !important;*/
+
+}
+.button_group>div>button {
+	margin-top: 20px;
+	width: 100%;
+	color: #3ccfcf;
+	font-weight: bolder;
+	padding: 12px;
+	border: solid 1px;
+	border-radius: 0px;
+}
+.button_group>div>button:focus {
+	color: #ffcd1f;
+}
+.flash_header {
+	text-align: center;
+	color: #dadee0;
+}
+.flashcard {
+	font-size: 20px;
+}
 /*.second_body {
 	background: url(../public/assets/image/splash-laptop-desktop.BwuW.jpg) no-repeat;
     background-size: 100%;

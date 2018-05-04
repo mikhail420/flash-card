@@ -1,6 +1,36 @@
 export default function() {
     this.namespace = '/api';
 
+    this.get('/flashcards', function() {
+        return {
+            data: [{
+                type: 'flashcards',
+                id: 'grand-old-mansion',
+                attributes: {
+                    question: 'What is lion',
+                    answer: 'Lion is a agressive and strong animal. King of desert!!!',
+                    image: ''
+                    }
+                }, {
+                type: 'flashcards',
+                id: 'urban-living',
+                attributes: {
+                    question: 'What is lion',
+                    answer: 'Lion is a agressive and strong animal. King of desert!!!',
+                    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
+                    }
+                }, {
+                type: 'flashcards',
+                id: 'downtown-charm',
+                attributes: {
+                    question: 'What is lion',
+                    answer: 'Lion is a agressive and strong animal. King of desert!!!',
+                    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'
+                }
+            }]
+        };
+    });
+
     let rentals = [{
     //   this.get('/rentals', function() {
     // return {

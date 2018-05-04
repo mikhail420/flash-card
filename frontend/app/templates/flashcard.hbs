@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-2 sidebar">
+			<div class="cards">
+				<h3>CARDS</h3>
+				<div class="progress-bar-striped active" id="myProgress">
+					<div class="progress-bar-striped active" id="myBar"></div>
+				</div>
+				<div class="rate">
+					<span>Progress</span>
+					<span>12/14</span>
+				</div>
+			</div>
+			<div class="button_group">
+				<div><button onclick="move()" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-play"></span> Play
+					</button>
+				</div>
+				<div><button onclick="move()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-random"></span> Shuffle</button></div>
+				<div><button onclick="move()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-tasks"></span> Options</button></div>
+			</div>
+		</div>
+		<div class="col-sm-8">
+			<h2 class="flash_header">My FlashCard</h2>
+			{{#carousel-container transitionInterval=400 as |ui controls|}}
+  				<div class="carousel-body">
+				    {{#each model as |flashcardUnit|}}
+				    	{{#ui.item}}
+						    {{flashcard-listing flashcard=flashcardUnit}}
+						{{/ui.item}}
+					{{/each}}
+  				</div>
+
+  				<button onclick={{controls.previous}}>
+    				Slide Left
+  				</button>
+  				<button onclick={{controls.next}}>
+    				Slide Right
+  				</button>
+			{{/carousel-container}}
+		</div>
+	</div>	
+</div>
+
+<script>
+	function move() {
+	  	var elem = document.getElementById("myBar");   
+	  	var width = 1;
+	  	var id = setInterval(frame, 10);
+	  	function frame() {
+	    	if (width >= 100) {
+	      	clearInterval(id);
+	    	} else {
+	      		width++; 
+	      		elem.style.width = width + '%'; 
+	    	}
+	  	}
+	}
+</script>

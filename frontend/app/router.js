@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('start');
   this.route('packs');
   this.route('rentals');
+  this.route('flashcard');
 });
 
 export default Router;
