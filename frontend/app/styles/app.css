@@ -186,7 +186,7 @@
   	background-color: #4CAF50;
 }
 .button_group {
-	margin-top: 170%;
+	margin-top: 240%;
 	margin-bottom: 40%;
 	/*position: absolute;*/
 	/*top: auto !important;*/
@@ -232,7 +232,7 @@
 }
 
 .cls_fullheight {
-	height: 750px;
+	height: 85.5vh;
 }
 
 .cls_toggleinput1 {
@@ -261,6 +261,11 @@
 
 .cls_fontfamily {
 	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_flashcardheader {
+	font-weight: 600;
+	color: #1d59ea;
 }
 
 .cls_fontweight {
@@ -303,6 +308,13 @@
 	margin-right: 60px;
 	outline: none !important;
 }
+<<<<<<< HEAD
+#manual {
+	display: ;
+}
+#auto {
+	/*display: block;*/
+=======
 
 .cls_studypackbtn {
 	font-weight: 800;
@@ -392,8 +404,12 @@
 
 .cls_imagemargin {
 	margin-top: 4%;
+<<<<<<< HEAD
 }
 
 .cls_sizedire {
 	font-size: 17px !important;
+=======
+>>>>>>> 0b617ffea21e9a9118f83c7a169886ef51fd4531
+>>>>>>> 6591a75db84a1ad9c74fad9d851e221967f1215a
 }
