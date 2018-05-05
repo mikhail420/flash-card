@@ -372,15 +372,8 @@
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.btn.sec.ico,
-.btn.pri.ico {
-	position: relative;
-	padding-left: 40px;
-	text-align: center;
-}
-
-.btn.sec.ico:before,
-.btn.pri.ico:before {
+.btn.sec.ico:before
+{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -399,4 +392,8 @@
 
 .cls_imagemargin {
 	margin-top: 4%;
+}
+
+.cls_sizedire {
+	font-size: 17px !important;
 }
