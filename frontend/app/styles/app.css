@@ -186,7 +186,7 @@
   	background-color: #4CAF50;
 }
 .button_group {
-	margin-top: 100%;
+	margin-top: 240%;
 	margin-bottom: 40%;
 	/*position: absolute;*/
 	/*top: auto !important;*/
@@ -206,7 +206,7 @@
 }
 .flash_header {
 	text-align: center;
-	color: #dadee0;
+	color: black;
 }
 .flashcard {
 	font-size: 20px;
@@ -231,6 +231,10 @@
 	font-family: 'hurme_no2-webfont' !important;	
 }
 
+.cls_fullheight {
+	height: 85.5vh;
+}
+
 .cls_toggleinput1 {
 	border: none;
 	background-color: white;
@@ -253,6 +257,19 @@
 .cls_createbtn {
 	font-weight: 600;
 	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_fontfamily {
+	font-family: 'hurme_no2-webfont' !important;
+}
+
+.cls_flashcardheader {
+	font-weight: 600;
+	color: #1d59ea;
+}
+
+.cls_fontweight {
+	font-weight: 600;
 }
 
 .cls_addquestion {
@@ -291,9 +308,108 @@
 	margin-right: 60px;
 	outline: none !important;
 }
+<<<<<<< HEAD
 #manual {
 	display: ;
 }
 #auto {
 	/*display: block;*/
+=======
+
+.cls_studypackbtn {
+	font-weight: 800;
+}
+
+.cls_indexbtncolor {
+	color: #1e8cf1 !important;
+	font-weight: 600;
+}
+
+.cls_indexpadding {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.cls_cardheight {
+	height: 84vh;
+	position: fixed;
+}
+
+.cls_aboutbtn {
+	outline: none !important;
+}
+
+.cls_fontbold {
+	font-weight: bolder;
+}
+
+.cls_center {
+	text-align: center;
+}
+
+.buttons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 260px;
+	margin-top: -130px;
+	margin-left: -250px;
+	text-align: center;
+}
+
+.btn {
+	display: inline-block;
+	min-width: 110px;
+	margin: 15px 5px;
+	padding: 10px 15px 12px;
+	font: 700 12px/1;
+	border-radius: 3px;
+	box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.btn.sec {
+	color: white;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	background: #1e8cf1;
+}
+
+.btn.sec:hover {
+	background: #1e8cf1;
+}
+
+.btn.pri {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn.sec.ico,
+.btn.pri.ico {
+	position: relative;
+	padding-left: 40px;
+	text-align: center;
+}
+
+.btn.sec.ico:before,
+.btn.pri.ico:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 30px;
+	padding: 10px 0 12px;
+	font-family: 'hurme_no2-webfont' !important;
+	text-align: center;
+	border-radius: 3px 0 0 3px;
+	background: rgba(0, 0, 0, 0.15);
+}
+
+.cls_outline {
+	outline: none !important;
+}
+
+.cls_imagemargin {
+	margin-top: 4%;
+>>>>>>> 0b617ffea21e9a9118f83c7a169886ef51fd4531
 }

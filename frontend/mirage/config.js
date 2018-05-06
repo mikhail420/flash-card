@@ -9,7 +9,7 @@ export default function() {
                 attributes: {
                     question: 'What is lion',
                     answer: 'Lion is a agressive and strong animal. King of desert!!!',
-                    image: ''
+                    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
                     }
                 }, {
                 type: 'flashcards',
