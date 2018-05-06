@@ -22,38 +22,37 @@
 		</div>
 		<div class="col-sm-8">
 			<h2 class="flash_header">My FlashCard</h2>
-			{{#carousel-container transitionInterval=400 as |ui controls|}}
-  				<div class="carousel-body">
-				    {{#each model as |flashcardUnit|}}
-				    	{{#ui.item}}
-						    {{flashcard-listing flashcard=flashcardUnit}}
-						{{/ui.item}}
-					{{/each}}
-  				</div>
-
-  				<button onclick={{controls.previous}}>
-    				Slide Left
-  				</button>
-  				<button onclick={{controls.next}}>
-    				Slide Right
-  				</button>
-			{{/carousel-container}}
+			<div class="one-time">
+				{{#each model as |flashcardUnit|}}
+			  		{{flashcard-listing flashcard=flashcardUnit}}
+			  	{{/each}}
+			</div>
 		</div>
 	</div>	
 </div>
 
 <script>
 	function move() {
-	  	var elem = document.getElementById("myBar");   
+	  	var elem = document.getElementById("myBar");  
 	  	var width = 1;
-	  	var id = setInterval(frame, 10);
+	  	var id = setInterval(frame, 100);
 	  	function frame() {
 	    	if (width >= 100) {
 	      	clearInterval(id);
 	    	} else {
-	      		width++; 
+	      		width = width + 1; 
 	      		elem.style.width = width + '%'; 
 	    	}
 	  	}
 	}
+	$(document).ready(function(){
+      	$('.one-time').slick({
+      		infinite: true,
+      		speed: 30,
+      		fade: true,
+      		slidesToShow: 1,
+      		adaptiveHeight: true,
+      		autoplay: true
+      	});
+    });
 </script>

@@ -2,6 +2,11 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
 	model() {
+		[
+  			{ url: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=slide 1&w=600&h=400' }, 
+  			{ url: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=slide 2&w=600&h=400' }, 
+  			{ url: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=slide 3&w=600&h=400' }
+		];
 		return this.get('store').findAll('flashcard');
     // return [{
     //   id: 'grand-old-mansion',
